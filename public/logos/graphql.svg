@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="352" height="387" viewBox="0 0 352 387">
+  <title>GraphQL icon</title>
+  <path fill="none" stroke="#e10098" stroke-width="16" d="M316.69 114.25L176 35 35.31 114.25v158.49L176 351.98l140.69-79.24H35.31L176 35l140.69 237.74z" />
+  <g fill="#e10098">
+    <circle cx="176" cy="35" r="35" />
+    <circle cx="35.31" cy="272.74" r="35" />
+    <circle cx="316.69" cy="272.74" r="35" />
+    <circle cx="176" cy="351.984" r="35" />
+    <circle cx="35.31" cy="113.25" r="35" />
+    <circle cx="316.69" cy="114.25" r="35" />
+  </g>
+</svg>

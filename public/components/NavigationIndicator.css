@@ -1,0 +1,31 @@
+.NavigationIndicator__container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 100%;
+  z-index: 2;
+  height: 2px;
+  background-color: hsl(
+    var(--daui-interact-hue),
+    var(--daui-interact-saturation),
+    var(--daui-interact-lightness)
+  );
+  box-shadow: 0 1px 8px hsla(0, 0%, 0%, var(--daui-shadow-opacity));
+  opacity: 0;
+  transition-property: right, opacity;
+  transition-duration: 0s;
+  pointer-events: none;
+}
+
+.NavigationIndicator__container--loading {
+  right: 5%;
+  opacity: 0.95;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 8s, 0s;
+}
+
+.NavigationIndicator__container--done {
+  right: 0;
+  transition-duration: var(--NavigationIndicator-done-duration);
+  transition-delay: 0s, var(--NavigationIndicator-done-duration);
+}

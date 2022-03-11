@@ -1,0 +1,7 @@
+.App__footer {
+  margin: 4.5rem var(--daui-spacing);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--daui-spacing);
+}

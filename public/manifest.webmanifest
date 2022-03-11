@@ -1,0 +1,15 @@
+{
+  "name": "Ruck",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "theme_color": "white",
+  "background_color": "white",
+  "icons": [
+    {
+      "src": "apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ]
+}

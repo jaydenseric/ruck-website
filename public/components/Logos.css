@@ -1,0 +1,8 @@
+.Logos__figure {
+  display: grid;
+  grid-auto-flow: column;
+  gap: var(--daui-spacing);
+  margin: calc(var(--daui-spacing) * 3) var(--daui-spacing);
+  max-width: 100vmin;
+  perspective: 100vw;
+}

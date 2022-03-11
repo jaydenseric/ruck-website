@@ -1,0 +1,7 @@
+.Section__section {
+  margin: 4.5rem 0;
+}
+
+.Section__header {
+  margin: var(--daui-spacing);
+}
