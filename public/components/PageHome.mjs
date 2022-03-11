@@ -78,6 +78,14 @@ export default function PageHome() {
             Picture,
             { width: 1, height: 1 },
             h("img", {
+              src: "/logos/ruck.svg",
+              alt: "Ruck logo",
+            }),
+          ),
+          h(
+            Picture,
+            { width: 1, height: 1 },
+            h("img", {
               src: "/logos/deno.svg",
               alt: "Deno logo",
             }),

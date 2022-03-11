@@ -1,4 +1,4 @@
-![Ruck logo](public/favicon.svg)
+![Ruck logo](./public/logos/ruck.svg)
 
 # Ruck website
 

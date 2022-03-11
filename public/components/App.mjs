@@ -44,7 +44,7 @@ const headMetaFragment = h(
     rel: "icon",
     type: "image/svg+xml",
     sizes: "any",
-    href: "/favicon.svg",
+    href: "/logos/ruck.svg",
   }),
   h("link", { rel: "apple-touch-icon", href: "/apple-touch-icon.png" }),
   h("link", { rel: "manifest", href: "/manifest.webmanifest" }),
