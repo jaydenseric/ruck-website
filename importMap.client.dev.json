@@ -1,7 +1,7 @@
 {
   "imports": {
     "class-name-prop": "https://unpkg.com/class-name-prop@5.0.0/classNameProp.mjs",
-    "device-agnostic-ui/": "https://unpkg.com/device-agnostic-ui@10.0.0/",
+    "device-agnostic-ui/": "https://unpkg.com/device-agnostic-ui@10.1.0/",
     "env/": "/env/",
     "graphql-react/": "https://unpkg.com/graphql-react@17.0.0/",
     "react": "https://cdn.esm.sh/v67/react@17.0.2/es2021/react.development.js",

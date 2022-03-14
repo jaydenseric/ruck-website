@@ -1,11 +1,11 @@
 // @ts-check
 
-import Heading from "device-agnostic-ui/Heading.mjs";
+import Heading, { css as cssHeading } from "device-agnostic-ui/Heading.mjs";
 import { createElement as h } from "react";
 
 /** @type {import("ruck/routeDetailsForContentWithCss.mjs").RouteContentWithCss["css"]} */
 export const css = new Set([
-  "https://unpkg.com/device-agnostic-ui@10.0.0/Heading.css",
+  ...cssHeading,
   "/components/PageHeader.css",
 ]);
 

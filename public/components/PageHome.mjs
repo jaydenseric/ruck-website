@@ -1,10 +1,10 @@
 // @ts-check
 
-import Heading from "device-agnostic-ui/Heading.mjs";
-import LinkText from "device-agnostic-ui/LinkText.mjs";
-import Margin from "device-agnostic-ui/Margin.mjs";
-import Para from "device-agnostic-ui/Para.mjs";
-import Picture from "device-agnostic-ui/Picture.mjs";
+import Heading, { css as cssHeading } from "device-agnostic-ui/Heading.mjs";
+import LinkText, { css as cssLinkText } from "device-agnostic-ui/LinkText.mjs";
+import Margin, { css as cssMargin } from "device-agnostic-ui/Margin.mjs";
+import Para, { css as cssPara } from "device-agnostic-ui/Para.mjs";
+import Picture, { css as cssPicture } from "device-agnostic-ui/Picture.mjs";
 import { createElement as h, Fragment } from "react";
 
 import useDescription from "../hooks/useDescription.mjs";
@@ -17,11 +17,11 @@ import TextIcon from "./TextIcon.mjs";
 
 /** @type {import("ruck/routeDetailsForContentWithCss.mjs").RouteContentWithCss["css"]} */
 export const css = new Set([
-  "https://unpkg.com/device-agnostic-ui@10.0.0/Heading.css",
-  "https://unpkg.com/device-agnostic-ui@10.0.0/LinkText.css",
-  "https://unpkg.com/device-agnostic-ui@10.0.0/Margin.css",
-  "https://unpkg.com/device-agnostic-ui@10.0.0/Para.css",
-  "https://unpkg.com/device-agnostic-ui@10.0.0/Picture.css",
+  ...cssHeading,
+  ...cssLinkText,
+  ...cssMargin,
+  ...cssPara,
+  ...cssPicture,
   ...cssIconGitHub,
   ...cssLogos,
   ...cssPageHeader,

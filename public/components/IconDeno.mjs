@@ -1,11 +1,11 @@
 // @ts-check
 
-import Icon from "device-agnostic-ui/Icon.mjs";
+import Icon, { css as cssIcon } from "device-agnostic-ui/Icon.mjs";
 import { createElement as h } from "react";
 
 /** @type {import("ruck/routeDetailsForContentWithCss.mjs").RouteContentWithCss["css"]} */
 export const css = new Set([
-  "https://unpkg.com/device-agnostic-ui@10.0.0/Icon.css",
+  ...cssIcon,
 ]);
 
 /**

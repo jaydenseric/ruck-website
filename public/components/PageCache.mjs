@@ -1,7 +1,7 @@
 // @ts-check
 
-import Loading from "device-agnostic-ui/Loading.mjs";
-import Margin from "device-agnostic-ui/Margin.mjs";
+import Loading, { css as cssLoading } from "device-agnostic-ui/Loading.mjs";
+import Margin, { css as cssMargin } from "device-agnostic-ui/Margin.mjs";
 import { createElement as h } from "react";
 
 import ErrorMessageLoading, {
@@ -10,8 +10,8 @@ import ErrorMessageLoading, {
 
 /** @type {import("ruck/routeDetailsForContentWithCss.mjs").RouteContentWithCss["css"]} */
 export const css = new Set([
-  "https://unpkg.com/device-agnostic-ui@10.0.0/Loading.css",
-  "https://unpkg.com/device-agnostic-ui@10.0.0/Margin.css",
+  ...cssLoading,
+  ...cssMargin,
   ...cssErrorMessageLoading,
 ]);
 

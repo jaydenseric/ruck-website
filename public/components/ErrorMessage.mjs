@@ -1,6 +1,6 @@
 // @ts-check
 
-import Para from "device-agnostic-ui/Para.mjs";
+import Para, { css as cssPara } from "device-agnostic-ui/Para.mjs";
 import { createElement as h } from "react";
 
 import GrumpyCat from "./GrumpyCat.mjs";
@@ -8,7 +8,7 @@ import PageHeader, { css as cssPageHeader } from "./PageHeader.mjs";
 
 /** @type {import("ruck/routeDetailsForContentWithCss.mjs").RouteContentWithCss["css"]} */
 export const css = new Set([
-  "https://unpkg.com/device-agnostic-ui@10.0.0/Para.css",
+  ...cssPara,
   ...cssPageHeader,
 ]);
 

@@ -1,10 +1,12 @@
 // @ts-check
 
-import Html from "device-agnostic-ui/Html.mjs";
-import LinkText from "device-agnostic-ui/LinkText.mjs";
-import ListUnordered from "device-agnostic-ui/ListUnordered.mjs";
-import Margin from "device-agnostic-ui/Margin.mjs";
-import Para from "device-agnostic-ui/Para.mjs";
+import Html, { css as cssHtml } from "device-agnostic-ui/Html.mjs";
+import LinkText, { css as cssLinkText } from "device-agnostic-ui/LinkText.mjs";
+import ListUnordered, {
+  css as cssListUnordered,
+} from "device-agnostic-ui/ListUnordered.mjs";
+import Margin, { css as cssMargin } from "device-agnostic-ui/Margin.mjs";
+import Para, { css as cssPara } from "device-agnostic-ui/Para.mjs";
 import useAutoLoad from "graphql-react/useAutoLoad.mjs";
 import useCacheEntry from "graphql-react/useCacheEntry.mjs";
 import useWaterfallLoad from "graphql-react/useWaterfallLoad.mjs";
@@ -22,17 +24,11 @@ import PageHeader, { css as cssPageHeader } from "./PageHeader.mjs";
 
 /** @type {import("ruck/routeDetailsForContentWithCss.mjs").RouteContentWithCss["css"]} */
 export const css = new Set([
-  "https://unpkg.com/device-agnostic-ui@10.0.0/Blockquote.css",
-  "https://unpkg.com/device-agnostic-ui@10.0.0/Code.css",
-  "https://unpkg.com/device-agnostic-ui@10.0.0/Heading.css",
-  "https://unpkg.com/device-agnostic-ui@10.0.0/Html.css",
-  "https://unpkg.com/device-agnostic-ui@10.0.0/LinkText.css",
-  "https://unpkg.com/device-agnostic-ui@10.0.0/ListOrdered.css",
-  "https://unpkg.com/device-agnostic-ui@10.0.0/ListUnordered.css",
-  "https://unpkg.com/device-agnostic-ui@10.0.0/Margin.css",
-  "https://unpkg.com/device-agnostic-ui@10.0.0/Para.css",
-  "https://unpkg.com/device-agnostic-ui@10.0.0/Pre.css",
-  "https://unpkg.com/device-agnostic-ui@10.0.0/Table.css",
+  ...cssHtml,
+  ...cssLinkText,
+  ...cssListUnordered,
+  ...cssMargin,
+  ...cssPara,
   ...cssErrorMessageMissing,
   ...cssPageCache,
   ...cssPageHeader,

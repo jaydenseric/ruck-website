@@ -1,8 +1,8 @@
 // @ts-check
 
-import LinkNav from "device-agnostic-ui/LinkNav.mjs";
-import LinkText from "device-agnostic-ui/LinkText.mjs";
-import Nav from "device-agnostic-ui/Nav.mjs";
+import LinkNav, { css as cssLinkNav } from "device-agnostic-ui/LinkNav.mjs";
+import LinkText, { css as cssLinkText } from "device-agnostic-ui/LinkText.mjs";
+import Nav, { css as cssNav } from "device-agnostic-ui/Nav.mjs";
 import { createElement as h, Fragment, useMemo } from "react";
 import useCss from "ruck/useCss.mjs";
 import useHead from "ruck/useHead.mjs";
@@ -18,11 +18,11 @@ import NavigationIndicator, {
 import TextIcon from "./TextIcon.mjs";
 
 const css = new Set([
-  "https://unpkg.com/device-agnostic-ui@10.0.0/theme.css",
-  "https://unpkg.com/device-agnostic-ui@10.0.0/global.css",
-  "https://unpkg.com/device-agnostic-ui@10.0.0/LinkNav.css",
-  "https://unpkg.com/device-agnostic-ui@10.0.0/LinkText.css",
-  "https://unpkg.com/device-agnostic-ui@10.0.0/Nav.css",
+  "https://unpkg.com/device-agnostic-ui@10.1.0/theme.css",
+  "https://unpkg.com/device-agnostic-ui@10.1.0/global.css",
+  ...cssLinkNav,
+  ...cssLinkText,
+  ...cssNav,
   ...cssIconDeno,
   ...cssIconGitHub,
   ...cssIconRuck,
