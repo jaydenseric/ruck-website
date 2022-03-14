@@ -1,0 +1,13 @@
+**/.DS_Store
+.git
+.github
+.vscode
+env
+public/env
+scripts/.env.sh
+scripts/dev.sh
+.editorconfig
+.gitignore
+fly.toml
+license.md
+readme.md
