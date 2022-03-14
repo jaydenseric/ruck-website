@@ -3,7 +3,7 @@
 import LinkNav from "device-agnostic-ui/LinkNav.mjs";
 import LinkText from "device-agnostic-ui/LinkText.mjs";
 import Nav from "device-agnostic-ui/Nav.mjs";
-import { createElement as h, Fragment } from "react";
+import { createElement as h, Fragment, useMemo } from "react";
 import useCss from "ruck/useCss.mjs";
 import useHead from "ruck/useHead.mjs";
 import useRoute from "ruck/useRoute.mjs";
@@ -31,30 +31,36 @@ const css = new Set([
   "/components/App.css",
 ]);
 
-const headMetaFragment = h(
-  Fragment,
-  null,
-  h("meta", {
-    name: "viewport",
-    content: "width=device-width, initial-scale=1",
-  }),
-  h("meta", { name: "theme-color", content: "white" }),
-  h("link", { rel: "icon", href: "/favicon.ico" }),
-  h("link", {
-    rel: "icon",
-    type: "image/svg+xml",
-    sizes: "any",
-    href: "/logos/ruck.svg",
-  }),
-  h("link", { rel: "apple-touch-icon", href: "/apple-touch-icon.png" }),
-  h("link", { rel: "manifest", href: "/manifest.webmanifest" }),
-);
-
 /**
  * React component for the Ruck app.
  * @type {import("ruck/serve.mjs").AppComponent}
  */
 export default function App() {
+  const route = useRoute();
+  const headMetaFragment = useMemo(() =>
+    h(
+      Fragment,
+      null,
+      h("meta", {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1",
+      }),
+      h("meta", { name: "theme-color", content: "white" }),
+      h("meta", {
+        name: "og:image",
+        content: `${route.url.origin}/social-preview.png`,
+      }),
+      h("link", { rel: "icon", href: "/favicon.ico" }),
+      h("link", {
+        rel: "icon",
+        type: "image/svg+xml",
+        sizes: "any",
+        href: "/logos/ruck.svg",
+      }),
+      h("link", { rel: "apple-touch-icon", href: "/apple-touch-icon.png" }),
+      h("link", { rel: "manifest", href: "/manifest.webmanifest" }),
+    ), [route.url.origin]);
+
   useHead("1-1-meta", headMetaFragment);
 
   for (const href of css) useCss(href);
@@ -82,7 +88,7 @@ export default function App() {
       ),
       h(LinkNavRoute, { href: "/releases" }, "Releases"),
     ),
-    useRoute().content,
+    route.content,
     h(
       "footer",
       { className: "App__footer" },
