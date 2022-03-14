@@ -50,6 +50,7 @@ export default function App() {
         name: "og:image",
         content: `${route.url.origin}/social-preview.png`,
       }),
+      h("meta", { name: "twitter:card", content: "summary" }),
       h("link", { rel: "icon", href: "/favicon.ico" }),
       h("link", {
         rel: "icon",
