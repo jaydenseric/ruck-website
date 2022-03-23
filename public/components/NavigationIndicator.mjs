@@ -6,7 +6,9 @@ import { createElement as h, useCallback, useEffect, useState } from "react";
 const DONE_DURATION = 250;
 
 /** @type {import("ruck/routeDetailsForContentWithCss.mjs").RouteContentWithCss["css"]} */
-export const css = new Set(["/components/NavigationIndicator.css"]);
+export const css = new Set([
+  "/components/NavigationIndicator.css",
+]);
 
 /** React component for a Ruck app route navigation indicator. */
 export default function NavigationIndicator() {
