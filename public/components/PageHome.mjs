@@ -162,7 +162,7 @@ export default function PageHome() {
             h(
               LinkText,
               { href: "https://github.com/jaydenseric/ruck" },
-              h(TextIcon, { icon: IconGitHub }, "Lean more"),
+              h(TextIcon, { icon: IconGitHub }, "Learn more"),
             ),
           ),
         ),
