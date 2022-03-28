@@ -3,10 +3,12 @@
 import { createElement as h, useContext } from "react";
 import TransferContext from "ruck/TransferContext.mjs";
 
-import ErrorMessage, { css } from "./ErrorMessage.mjs";
+import ErrorMessage, { css as cssErrorMessage } from "./ErrorMessage.mjs";
 
 /** @type {import("ruck/routeDetailsForContentWithCss.mjs").RouteContentWithCss["css"]} */
-export { css };
+export const css = new Set([
+  ...cssErrorMessage,
+]);
 
 /** React component for a loading error message. */
 export default function ErrorMessageLoading() {
