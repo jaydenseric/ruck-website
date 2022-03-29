@@ -2,7 +2,7 @@
 
 import { createElement as h } from "react";
 
-/** @type {import("ruck/routeDetailsForContentWithCss.mjs").RouteContentWithCss["css"]} */
+/** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
 export const css = new Set([
   "/components/Logos.css",
 ]);

@@ -5,7 +5,7 @@ import { createElement as h, useCallback, useEffect, useState } from "react";
 
 const DONE_DURATION = 250;
 
-/** @type {import("ruck/routeDetailsForContentWithCss.mjs").RouteContentWithCss["css"]} */
+/** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
 export const css = new Set([
   "/components/NavigationIndicator.css",
 ]);

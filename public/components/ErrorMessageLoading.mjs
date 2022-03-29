@@ -5,7 +5,7 @@ import TransferContext from "ruck/TransferContext.mjs";
 
 import ErrorMessage, { css as cssErrorMessage } from "./ErrorMessage.mjs";
 
-/** @type {import("ruck/routeDetailsForContentWithCss.mjs").RouteContentWithCss["css"]} */
+/** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssErrorMessage,
 ]);

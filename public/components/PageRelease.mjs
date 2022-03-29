@@ -22,7 +22,7 @@ import FormattedDate from "./FormattedDate.mjs";
 import PageCache, { css as cssPageCache } from "./PageCache.mjs";
 import PageHeader, { css as cssPageHeader } from "./PageHeader.mjs";
 
-/** @type {import("ruck/routeDetailsForContentWithCss.mjs").RouteContentWithCss["css"]} */
+/** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssHtml,
   ...cssLinkText,
