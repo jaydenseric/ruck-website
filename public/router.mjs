@@ -8,7 +8,7 @@ import ErrorMessageLoading, {
 } from "./components/ErrorMessageLoading.mjs";
 
 /**
- * Gets the Ruck app route details for a URL.
+ * Gets the Ruck app route plan for a URL.
  * @type {import("ruck/serve.mjs").Router}
  */
 export default function router(url, headManager, isInitialRoute) {
