@@ -15,11 +15,11 @@ import { createElement as h, Fragment, useCallback } from "react";
 import useDescription from "../hooks/useDescription.mjs";
 import useLoadGithubApi from "../hooks/useLoadGithubApi.mjs";
 import useTitle from "../hooks/useTitle.mjs";
-import ErrorMessageMissing, {
-  css as cssErrorMessageMissing,
-} from "./ErrorMessageMissing.mjs";
 import FormattedDate from "./FormattedDate.mjs";
 import PageCache, { css as cssPageCache } from "./PageCache.mjs";
+import PageErrorMissing, {
+  css as cssPageErrorMissing,
+} from "./PageErrorMissing.mjs";
 import PageHeader, { css as cssPageHeader } from "./PageHeader.mjs";
 
 /** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
@@ -29,7 +29,7 @@ export const css = new Set([
   ...cssListUnordered,
   ...cssMargin,
   ...cssPara,
-  ...cssErrorMessageMissing,
+  ...cssPageErrorMissing,
   ...cssPageCache,
   ...cssPageHeader,
 ]);
@@ -99,7 +99,7 @@ export default function PageRelease({ releaseTagName }) {
   return isWaterfallLoading ? null : h(PageCache, {
     cacheValue: cacheValue,
     renderData(/** @type {GithubQueryData} */ data) {
-      return !data.repository.release ? h(ErrorMessageMissing) : h(
+      return !data.repository.release ? h(PageErrorMissing) : h(
         Fragment,
         null,
         h(

@@ -4,15 +4,15 @@ import Loading, { css as cssLoading } from "device-agnostic-ui/Loading.mjs";
 import Margin, { css as cssMargin } from "device-agnostic-ui/Margin.mjs";
 import { createElement as h } from "react";
 
-import ErrorMessageLoading, {
-  css as cssErrorMessageLoading,
-} from "./ErrorMessageLoading.mjs";
+import PageErrorLoading, {
+  css as cssPageErrorLoading,
+} from "./PageErrorLoading.mjs";
 
 /** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssLoading,
   ...cssMargin,
-  ...cssErrorMessageLoading,
+  ...cssPageErrorLoading,
 ]);
 
 /**
@@ -29,7 +29,7 @@ export default function PageCache({
   renderData,
 }) {
   return errors
-    ? h(ErrorMessageLoading, null)
+    ? h(PageErrorLoading, null)
     : data
     ? renderData(data)
     : h(Margin, null, h(Loading, { size: "2em" }));
