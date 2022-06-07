@@ -34,7 +34,6 @@ export const css = new Set([
   ...cssPageHeader,
 ]);
 
-const cacheKey = "PageRelease_github_repo_release";
 const query =
   /* GraphQL */ `query ($repoOwner: String!, $repoName: String!, $releaseTagName: String!) {
   repository(owner: $repoOwner, name: $repoName) {
@@ -69,6 +68,7 @@ export default function PageRelease({ releaseTagName }) {
   useTitle(`Release ${releaseTagName}`);
   useDescription(`Changelog entry for Ruck release ${releaseTagName}.`);
 
+  const cacheKey = `PageRelease_github_repo_release_${releaseTagName}`;
   const cacheValue =
     /**
      * @type {{
