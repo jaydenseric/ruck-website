@@ -48,10 +48,9 @@ export default function NavigationIndicator() {
   }, [onRuckRouteChangeEnd, onRuckRouteChangeStart]);
 
   useEffect(
-    () =>
-      () => {
-        if (timeoutId) clearTimeout(timeoutId);
-      },
+    () => () => {
+      if (timeoutId) clearTimeout(timeoutId);
+    },
     [timeoutId],
   );
 
