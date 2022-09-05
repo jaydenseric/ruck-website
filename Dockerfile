@@ -1,4 +1,4 @@
-FROM denoland/deno:1.24.0
+FROM denoland/deno:1.25.1
 EXPOSE 8080
 WORKDIR /ruck-website
 ADD . .
