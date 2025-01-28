@@ -19,7 +19,7 @@ import PageHeader, { css as cssPageHeader } from "./PageHeader.mjs";
 import Section, { css as cssSection } from "./Section.mjs";
 import TextIcon from "./TextIcon.mjs";
 
-/** @type {RouteContentWithCss["css"]} */
+/** @satisfies {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssHeading,
   ...cssLinkText,

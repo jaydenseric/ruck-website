@@ -7,7 +7,7 @@
 
 import { createElement as h } from "react";
 
-/** @type {RouteContentWithCss["css"]} */
+/** @satisfies {RouteContentWithCss["css"]} */
 export const css = new Set([
   "/components/Section.css",
 ]);

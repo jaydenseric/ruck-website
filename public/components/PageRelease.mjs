@@ -26,7 +26,7 @@ import PageErrorMissing, {
 } from "./PageErrorMissing.mjs";
 import PageHeader, { css as cssPageHeader } from "./PageHeader.mjs";
 
-/** @type {RouteContentWithCss["css"]} */
+/** @satisfies {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssHtml,
   ...cssLinkText,

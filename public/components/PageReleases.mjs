@@ -26,7 +26,7 @@ import PageCache, { css as cssPageCache } from "./PageCache.mjs";
 import PageHeader, { css as cssPageHeader } from "./PageHeader.mjs";
 import Section, { css as cssSection } from "./Section.mjs";
 
-/** @type {RouteContentWithCss["css"]} */
+/** @satisfies {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssHeading,
   ...cssHtml,

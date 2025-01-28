@@ -9,7 +9,7 @@ import TransferContext from "ruck/TransferContext.mjs";
 
 import PageError, { css as cssPageError } from "./PageError.mjs";
 
-/** @type {RouteContentWithCss["css"]} */
+/** @satisfies {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssPageError,
 ]);

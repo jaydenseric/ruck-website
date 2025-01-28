@@ -10,7 +10,7 @@ import { createElement as h } from "react";
 import useOnClickRouteLink from "ruck/useOnClickRouteLink.mjs";
 import useRoute from "ruck/useRoute.mjs";
 
-/** @type {RouteContentWithCss["css"]} */
+/** @satisfies {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssLinkNav,
 ]);

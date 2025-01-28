@@ -11,7 +11,7 @@ import { createElement as h } from "react";
 import GrumpyCat from "./GrumpyCat.mjs";
 import PageHeader, { css as cssPageHeader } from "./PageHeader.mjs";
 
-/** @type {RouteContentWithCss["css"]} */
+/** @satisfies {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssPara,
   ...cssPageHeader,

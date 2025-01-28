@@ -9,7 +9,7 @@ import { createElement as h, useCallback, useEffect, useState } from "react";
 
 const DONE_DURATION = 250;
 
-/** @type {RouteContentWithCss["css"]} */
+/** @satisfies {RouteContentWithCss["css"]} */
 export const css = new Set([
   "/components/NavigationIndicator.css",
 ]);

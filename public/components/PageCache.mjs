@@ -12,7 +12,7 @@ import PageErrorLoading, {
   css as cssPageErrorLoading,
 } from "./PageErrorLoading.mjs";
 
-/** @type {RouteContentWithCss["css"]} */
+/** @satisfies {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssLoading,
   ...cssMargin,

@@ -8,7 +8,7 @@
 import Heading, { css as cssHeading } from "device-agnostic-ui/Heading.mjs";
 import { createElement as h } from "react";
 
-/** @type {RouteContentWithCss["css"]} */
+/** @satisfies {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssHeading,
   "/components/PageHeader.css",
