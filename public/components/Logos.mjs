@@ -1,6 +1,7 @@
 // @ts-check
 
 /**
+ * @import { ReactNode } from "react"
  * @import { RouteContentWithCss } from "ruck/routePlanForContentWithCss.mjs"
  */
 
@@ -14,7 +15,7 @@ export const css = new Set([
 /**
  * React component for displaying logos.
  * @param {object} props Props.
- * @param {Array<import("react").ReactNode>} props.logos Logos.
+ * @param {Array<ReactNode>} props.logos Logos.
  */
 export default function Logos({ logos }) {
   return h(

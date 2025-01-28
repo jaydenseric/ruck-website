@@ -1,12 +1,11 @@
 // @ts-check
 
 /**
+ * @import Icon from "device-agnostic-ui/Icon.mjs"
  * @import { ComponentPropsWithoutRef, ReactElement, ReactNode } from "react"
  */
 
 import { createElement as h } from "react";
-
-/** @typedef {typeof import("device-agnostic-ui/Icon.mjs").default} Icon */
 
 /**
  * React component for an inline text icon.
