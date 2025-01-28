@@ -58,14 +58,6 @@ variables):
 ./scripts/serve.sh
 ```
 
-### Type check
-
-To type check every JavaScript module in the project:
-
-```sh
-./scripts/type-check.sh
-```
-
 ### Format
 
 To format the project:
@@ -80,4 +72,12 @@ To lint the project:
 
 ```sh
 deno lint
+```
+
+### Type check
+
+To type check every JavaScript module in the project:
+
+```sh
+./scripts/type-check.sh
 ```
