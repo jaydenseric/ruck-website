@@ -1,8 +1,13 @@
 // @ts-check
 
+/**
+ * @import { ReactNode } from "react"
+ * @import { RouteContentWithCss } from "ruck/routePlanForContentWithCss.mjs"
+ */
+
 import { createElement as h } from "react";
 
-/** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
+/** @type {RouteContentWithCss["css"]} */
 export const css = new Set([
   "/components/Section.css",
 ]);
@@ -10,8 +15,8 @@ export const css = new Set([
 /**
  * React component for a page section.
  * @param {object} props Props.
- * @param {import("react").ReactNode} props.headerChildren Header children.
- * @param {import("react").ReactNode} [props.children] Children.
+ * @param {ReactNode} props.headerChildren Header children.
+ * @param {ReactNode} [props.children] Children.
  */
 export default function Section({ headerChildren, children }) {
   return h(

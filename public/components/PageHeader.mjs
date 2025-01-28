@@ -1,9 +1,14 @@
 // @ts-check
 
+/**
+ * @import { ReactNode } from "react"
+ * @import { RouteContentWithCss } from "ruck/routePlanForContentWithCss.mjs"
+ */
+
 import Heading, { css as cssHeading } from "device-agnostic-ui/Heading.mjs";
 import { createElement as h } from "react";
 
-/** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
+/** @type {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssHeading,
   "/components/PageHeader.css",
@@ -12,8 +17,8 @@ export const css = new Set([
 /**
  * React component for a page header.
  * @param {object} props Props.
- * @param {import("react").ReactNode} props.headingChildren Heading children.
- * @param {import("react").ReactNode} [props.children] Children.
+ * @param {ReactNode} props.headingChildren Heading children.
+ * @param {ReactNode} [props.children] Children.
  */
 export default function PageHeader({ headingChildren, children }) {
   return h(

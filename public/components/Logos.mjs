@@ -1,8 +1,12 @@
 // @ts-check
 
+/**
+ * @import { RouteContentWithCss } from "ruck/routePlanForContentWithCss.mjs"
+ */
+
 import { createElement as h } from "react";
 
-/** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
+/** @type {RouteContentWithCss["css"]} */
 export const css = new Set([
   "/components/Logos.css",
 ]);

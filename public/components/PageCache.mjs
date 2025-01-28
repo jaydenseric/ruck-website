@@ -1,5 +1,9 @@
 // @ts-check
 
+/**
+ * @import { RouteContentWithCss } from "ruck/routePlanForContentWithCss.mjs"
+ */
+
 import Loading, { css as cssLoading } from "device-agnostic-ui/Loading.mjs";
 import Margin, { css as cssMargin } from "device-agnostic-ui/Margin.mjs";
 import { createElement as h } from "react";
@@ -8,7 +12,7 @@ import PageErrorLoading, {
   css as cssPageErrorLoading,
 } from "./PageErrorLoading.mjs";
 
-/** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
+/** @type {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssLoading,
   ...cssMargin,

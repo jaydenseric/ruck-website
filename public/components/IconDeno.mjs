@@ -1,17 +1,21 @@
 // @ts-check
 
+/**
+ * @import { ComponentPropsWithoutRef } from "react"
+ * @import { RouteContentWithCss } from "ruck/routePlanForContentWithCss.mjs"
+ */
+
 import Icon, { css as cssIcon } from "device-agnostic-ui/Icon.mjs";
 import { createElement as h } from "react";
 
-/** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
+/** @type {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssIcon,
 ]);
 
 /**
  * React component for a Deno icon.
- * @param {Omit<React.ComponentPropsWithoutRef<typeof Icon>, "title">} props
- *   Props.
+ * @param {Omit<ComponentPropsWithoutRef<typeof Icon>, "title">} props Props.
  */
 export default function IconDeno(props) {
   return h(

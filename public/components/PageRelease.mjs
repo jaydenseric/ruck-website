@@ -1,5 +1,9 @@
 // @ts-check
 
+/**
+ * @import { RouteContentWithCss } from "ruck/routePlanForContentWithCss.mjs"
+ */
+
 import Html, { css as cssHtml } from "device-agnostic-ui/Html.mjs";
 import LinkText, { css as cssLinkText } from "device-agnostic-ui/LinkText.mjs";
 import ListUnordered, {
@@ -22,7 +26,7 @@ import PageErrorMissing, {
 } from "./PageErrorMissing.mjs";
 import PageHeader, { css as cssPageHeader } from "./PageHeader.mjs";
 
-/** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
+/** @type {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssHtml,
   ...cssLinkText,

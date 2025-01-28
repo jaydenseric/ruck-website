@@ -1,5 +1,7 @@
 // @ts-check
 
+/** @import { AppComponent } from "ruck/serve.mjs" */
+
 import LinkNav, { css as cssLinkNav } from "device-agnostic-ui/LinkNav.mjs";
 import LinkText, { css as cssLinkText } from "device-agnostic-ui/LinkText.mjs";
 import Nav, { css as cssNav } from "device-agnostic-ui/Nav.mjs";
@@ -33,7 +35,7 @@ const css = new Set([
 
 /**
  * React component for the Ruck app.
- * @type {import("ruck/serve.mjs").AppComponent}
+ * @type {AppComponent}
  */
 export default function App() {
   const route = useRoute();

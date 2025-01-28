@@ -1,11 +1,16 @@
 // @ts-check
 
+/**
+ * @import { ReactNode } from "react"
+ * @import { RouteContentWithCss } from "ruck/routePlanForContentWithCss.mjs"
+ */
+
 import LinkNav, { css as cssLinkNav } from "device-agnostic-ui/LinkNav.mjs";
 import { createElement as h } from "react";
 import useOnClickRouteLink from "ruck/useOnClickRouteLink.mjs";
 import useRoute from "ruck/useRoute.mjs";
 
-/** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
+/** @type {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssLinkNav,
 ]);
@@ -14,7 +19,7 @@ export const css = new Set([
  * React component for a Ruck app route {@link LinkNav navigation link}.
  * @param {object} props Props.
  * @param {string} props.href Link HREF.
- * @param {import("react").ReactNode} [props.children] Children.
+ * @param {ReactNode} [props.children] Children.
  */
 export default function LinkNavRoute({ href, children }) {
   const route = useRoute();

@@ -1,5 +1,9 @@
 // @ts-check
 
+/**
+ * @import { RouteContentWithCss } from "ruck/routePlanForContentWithCss.mjs"
+ */
+
 import Heading, { css as cssHeading } from "device-agnostic-ui/Heading.mjs";
 import Html, { css as cssHtml } from "device-agnostic-ui/Html.mjs";
 import LinkText, { css as cssLinkText } from "device-agnostic-ui/LinkText.mjs";
@@ -22,7 +26,7 @@ import PageCache, { css as cssPageCache } from "./PageCache.mjs";
 import PageHeader, { css as cssPageHeader } from "./PageHeader.mjs";
 import Section, { css as cssSection } from "./Section.mjs";
 
-/** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
+/** @type {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssHeading,
   ...cssHtml,
