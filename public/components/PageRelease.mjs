@@ -119,7 +119,7 @@ export default function PageRelease({ releaseTagName }) {
               },
             },
             "Published ",
-            h(FormattedDate, { datetime: data.repository.release.publishedAt }),
+            h(FormattedDate, { dateTime: data.repository.release.publishedAt }),
             ".",
           ),
         ),

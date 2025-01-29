@@ -9,13 +9,13 @@ const formatDay = new Intl.DateTimeFormat("en-US", { day: "numeric" });
 /**
  * React component for a formatted date.
  * @param {object} props Props.
- * @param {string} props.datetime ISO datetime.
+ * @param {string} props.dateTime ISO datetime.
  */
-export default function FormattedDate({ datetime }) {
-  const date = new Date(datetime);
+export default function FormattedDate({ dateTime }) {
+  const date = new Date(dateTime);
   return h(
     "time",
-    { datetime },
+    { dateTime },
     `${formatYear.format(date)}, ${formatMonth.format(date)} ${
       formatDay.format(date)
     }`,
