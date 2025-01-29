@@ -26,7 +26,7 @@ then
     --allow-net \
     --allow-read \
     --import-map=importMap.server.dev.json \
-    --watch=. \
+    --watch \
     scripts/serve.mjs
 else
   deno run \
