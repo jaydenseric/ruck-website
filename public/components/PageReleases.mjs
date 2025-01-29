@@ -157,7 +157,7 @@ export default function PageReleases() {
                 Para,
                 null,
                 "Published ",
-                h(FormattedDate, { dateTime: release.publishedAt }),
+                h(FormattedDate, { datetime: release.publishedAt }),
                 ".",
               ),
               h(
