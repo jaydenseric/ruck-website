@@ -2,9 +2,19 @@
 
 import { createElement as h } from "react";
 
-const formatYear = new Intl.DateTimeFormat("en-US", { year: "numeric" });
-const formatMonth = new Intl.DateTimeFormat("en-US", { month: "long" });
-const formatDay = new Intl.DateTimeFormat("en-US", { day: "numeric" });
+const timeZone = "UTC";
+const formatYear = new Intl.DateTimeFormat("en-US", {
+  year: "numeric",
+  timeZone,
+});
+const formatMonth = new Intl.DateTimeFormat("en-US", {
+  month: "long",
+  timeZone,
+});
+const formatDay = new Intl.DateTimeFormat("en-US", {
+  day: "numeric",
+  timeZone,
+});
 
 /**
  * React component for a formatted date.
