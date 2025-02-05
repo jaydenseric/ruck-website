@@ -60,6 +60,7 @@ export default function router(url, headManager, isInitialRoute) {
           content: h(PageRelease, { releaseTagName }),
           css,
         }),
+        catchImportContentWithCss,
       ),
       headManager,
       isInitialRoute,
