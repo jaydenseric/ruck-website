@@ -9,7 +9,7 @@ The [ruck.tech](https://ruck.tech) website for
 
 ## Requirements
 
-- [Deno CLI](https://deno.land/#installation) v2+.
+- [Deno CLI](https://deno.land/#installation) v2.4+.
 
 ## Installation
 
