@@ -7,8 +7,6 @@
 import classNameProp from "class-name-prop";
 import { createElement as h, useCallback, useEffect, useState } from "react";
 
-const DONE_DURATION = 250;
-
 /** @satisfies {RouteContentWithCss["css"]} */
 export const css = new Set([
   "/components/NavigationIndicator.css",
@@ -38,16 +36,25 @@ export default function NavigationIndicator() {
   }, []);
 
   useEffect(() => {
-    addEventListener("ruckroutechangestart", onRuckRouteChangeStart);
-    addEventListener("ruckroutechangeend", onRuckRouteChangeEnd);
-    addEventListener("ruckroutechangeabort", onRuckRouteChangeEnd);
-    addEventListener("ruckroutechangeerror", onRuckRouteChangeEnd);
+    const startEvent = "ruckroutechangestart";
+    const endEvents = [
+      "ruckroutechangeabort",
+      "ruckroutechangeend",
+      "ruckroutechangeerror",
+    ];
+
+    addEventListener(startEvent, onRuckRouteChangeStart);
+
+    for (const event of endEvents) {
+      addEventListener(event, onRuckRouteChangeEnd);
+    }
 
     return () => {
-      addEventListener("ruckroutechangestart", onRuckRouteChangeStart);
-      addEventListener("ruckroutechangeend", onRuckRouteChangeEnd);
-      addEventListener("ruckroutechangeabort", onRuckRouteChangeEnd);
-      addEventListener("ruckroutechangeerror", onRuckRouteChangeEnd);
+      removeEventListener(startEvent, onRuckRouteChangeStart);
+
+      for (const event of endEvents) {
+        removeEventListener(event, onRuckRouteChangeEnd);
+      }
     };
   }, [onRuckRouteChangeEnd, onRuckRouteChangeStart]);
 
@@ -69,3 +76,5 @@ export default function NavigationIndicator() {
     style: { "--NavigationIndicator-done-duration": `${DONE_DURATION}ms` },
   });
 }
+
+const DONE_DURATION = 250;
