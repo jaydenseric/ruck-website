@@ -101,7 +101,7 @@ export default function PageRelease({ releaseTagName }) {
   const isWaterfallLoading = useWaterfallLoad(cacheKey, load);
 
   return isWaterfallLoading ? null : h(PageCache, {
-    cacheValue: cacheValue,
+    cacheValue,
     renderData(/** @type {GithubQueryData} */ data) {
       return !data.repository.release ? h(PageErrorMissing) : h(
         Fragment,

@@ -108,7 +108,7 @@ export default function PageReleases() {
   const onClickRouteLink = useOnClickRouteLink();
 
   return isWaterfallLoading ? null : h(PageCache, {
-    cacheValue: cacheValue,
+    cacheValue,
     renderData(/** @type {GithubQueryData} */ data) {
       return h(
         Fragment,
